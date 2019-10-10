@@ -10,12 +10,12 @@ import UIKit
 class WATextField: UITextField {
     
     
-    func isValid() -> Bool {
-        if self.text?.isEmpty == true {
-            return false
-        }
-        return true
-    }
+//    func isValid() -> Bool {
+//        if self.text?.isEmpty == true {
+//            return false
+//        }
+//        return true
+//    }
     
     @IBInspectable var cornerRadius:CGFloat = 0.0 {
         didSet {

@@ -69,6 +69,63 @@ import UIKit
         return self.bounds
     }
     
+    @IBInspectable var setShadow: Bool = false {
+        didSet {
+            setShadow = true
+            if setShadow {
+                self.layer.masksToBounds = false
+            }
+        }
+    }
+    
+    @IBInspectable var shadowOpacity: Float = 0.0 {
+        didSet {
+            if setShadow {
+                self.layer.shadowOpacity = shadowOpacity
+            }
+        }
+    }
+    
+    @IBInspectable var shadowOffsetWidth:CGFloat = 0.0 {
+        didSet {
+            if setShadow {
+                self.layer.shadowOffset.width = shadowOffsetWidth
+            }
+        }
+    }
+    
+    @IBInspectable var shadowOffsetHeight:CGFloat = 0.0 {
+        didSet {
+            if setShadow {
+                self.layer.shadowOffset.height = shadowOffsetHeight
+            }
+        }
+    }
+    
+    @IBInspectable var shadowRadius: CGFloat = 0.0 {
+        didSet {
+            if setShadow {
+                self.layer.shadowRadius = shadowRadius
+            }
+        }
+    }
+    
+    @IBInspectable var shadowOffSet: CGSize = CGSize(width: 0, height: 0) {
+        didSet {
+            if setShadow {
+                self.layer.shadowOffset = shadowOffSet
+            }
+        }
+    }
+    
+    @IBInspectable var shadowColor: UIColor = UIColor.clear {
+        didSet {
+            if setShadow {
+                self.layer.shadowColor = shadowColor.cgColor
+            }
+        }
+    }
+    
     override init(frame: CGRect) {
         super.init(frame: frame)
     }
@@ -76,5 +133,4 @@ import UIKit
     required init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
     }
-
 }

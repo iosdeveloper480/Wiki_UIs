@@ -74,11 +74,4 @@ import UIKit
 //        }
 //    }
     
-    func isValid() -> Bool {
-        if self.text?.isEmpty == true {
-            return false
-        }
-        return true
-    }
-    
 }
